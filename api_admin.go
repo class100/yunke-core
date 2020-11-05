@@ -1,4 +1,4 @@
-package yunke
+package core
 
 const (
 	// AdminApiGetFinalClientByTypeUrl 客户端打包通知地址
