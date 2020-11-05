@@ -1,11 +1,11 @@
 package core
 
 import (
-	`encoding/json`
+	"encoding/json"
 
-	`github.com/storezhang/gox`
-	`github.com/storezhang/replace`
-	`github.com/storezhang/transfer`
+	"github.com/storezhang/gox"
+	"github.com/storezhang/replace"
+	"github.com/storezhang/transfer"
 )
 
 type (
@@ -99,7 +99,7 @@ func (ac *AppConfig) Replaces(
 		// 替换闪屏图片
 		replace.NewFileReplace(DefaultAppSplashFilename, splash),
 		// 替换包名
-		replace.NewStringContentReplace(DefaultAndroidManifestFilename, "com.class100.yunke.dev", packageName),
+		replace.NewStringContentReplace(DefaultAndroidManifestFilename, "com.class100.dev", packageName),
 		// 替换通信地址
 		replace.NewJSONReplace(DefaultAppConfigFilename, replace.JSONReplaceElement{
 			Path:  "server",
