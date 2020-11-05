@@ -77,7 +77,7 @@ func (oc *OrgConfig) PackageNotifyUrl(client BaseClient) (path string, err error
 }
 
 func (oc *OrgConfig) ApiUrl(
-	api string,
+	api ApiPath,
 	pathParams map[string]string,
 	version ApiVersion,
 ) (path string, err error) {
@@ -85,7 +85,7 @@ func (oc *OrgConfig) ApiUrl(
 }
 
 func (oc *OrgConfig) GetUrl(
-	path string,
+	path ApiPath,
 	pathParams map[string]string,
 	prefix string,
 	version ApiVersion,
