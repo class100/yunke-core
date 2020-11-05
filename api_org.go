@@ -1,4 +1,4 @@
-package yunke
+package core
 
 const (
 	// OrgApiClientPackageNotifyUrl 客户端打包通知地址

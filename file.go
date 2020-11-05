@@ -1,4 +1,4 @@
-package yunke
+package core
 
 type (
 	// UploadCourseContentReq 获取上传url请求
