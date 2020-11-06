@@ -108,6 +108,12 @@ type (
 
 		Lectures []*LectureInfo `json:"lectures"`
 	}
+
+	// LectureFirstByCourseIdReq 获取课程第一个讲次
+	LectureFirstByCourseIdReq struct {
+		// courseId 课程编号
+		CourseId int64 `json:"courseId,string" validate:"required"`
+	}
 )
 
 func (alr *AddLectureReq) Model() *Lecture {
