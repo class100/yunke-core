@@ -1,8 +1,10 @@
 package core
 
 const (
-	// 用户
-	UserApiAdd           ApiPath = "users"
+	// UserApiAdd 添加用户
+	UserApiAdd ApiPath = "users"
+	// UserTeacherApiDelete 删除角色为老师的用户
 	UserTeacherApiDelete ApiPath = "users/teachers/{id}"
-	UserApiUpdate        ApiPath = "users/{id}"
+	// UserApiUpdate 更新用户
+	UserApiUpdate ApiPath = "users/{id}"
 )
