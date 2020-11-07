@@ -14,5 +14,5 @@ const (
 	// LectureSwitchSequence 调整章节顺序
 	LectureSwitchSequence ApiPath = "lectures/s witches"
 	// GetFirstLectureByCourse 获取第一
-	LectureFirstByCourseId ApiPath = "lectures/courses/{courseId}/first"
+	LectureFirstByCourseId ApiPath = "lectures/firsts"
 )
