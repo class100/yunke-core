@@ -14,7 +14,7 @@ type (
 	// JoinMeetingRsp 加入会议响应
 	JoinMeetingRsp struct {
 		// AppId 程序编号
-		AppId int64 `json:"userId,string"`
+		AppId int64 `json:"appId,string"`
 		// VirtualUserId 虚拟账号
 		VirtualUserId string `json:"virtualUserId"`
 		// UserToken 令牌
