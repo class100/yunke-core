@@ -13,10 +13,10 @@ type (
 
 	// JoinMeetingRsp 加入会议响应
 	JoinMeetingRsp struct {
-		// UserId 编号
-		// 用户:则为UserId
-		// 教室盒子：则为ClassRoomId
-		UserID string `json:"userId,string"`
+		// AppId 程序编号
+		AppId int64 `json:"userId,string"`
+		// VirtualUserId 虚拟账号
+		VirtualUserId string `json:"virtualUserId"`
 		// UserToken 令牌
 		UserToken string `json:"userToken"`
 		// VirtualPhone 虚拟手机号
