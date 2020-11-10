@@ -7,8 +7,8 @@ type (
 
 		// AppId 产品ID
 		AppId int64 `json:"appId,string"`
-		// UserName 用户名字
-		UserName string `json:"userName"`
+		// Username 用户名字
+		Username string `json:"username"`
 	}
 
 	// JoinMeetingRsp 加入会议响应
