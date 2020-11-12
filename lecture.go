@@ -1,6 +1,6 @@
 package core
 
-import `github.com/storezhang/gox`
+import "github.com/storezhang/gox"
 
 type (
 	// LectureContent 课程信息
@@ -30,11 +30,11 @@ type (
 		// LectureId 课程Id
 		LectureId int64 `xorm:"bigint notnull default(0)" json:"lectureId,string"`
 		// FileId 展示图片文件编号Id
-		FileId string `xorm:"char(20) notnull default(0)" json:"fileId"`
+		FileId string `xorm:"char(20) notnull default(0)" json:"fileId" validate:"required len=20"`
 		// FileName 名称
-		FileName string `xorm:"varchar(32) notnull default('')" json:"fileName"`
+		FileName string `xorm:"varchar(32) notnull default('')" json:"fileName" validate:"required"`
 		// 内容类型：0-讲次视频，1-讲次资料
-		Type int8 `default:"0" xorm:"tinyint notnull default(0)" json:"type"`
+		Type int8 `default:"0" xorm:"tinyint notnull default(0)" json:"type" validate:"required_with=0 1"`
 	}
 
 	// AddLectureReq 添加讲次请求
@@ -54,7 +54,7 @@ type (
 		// Profile 简介
 		Profile string `json:"profile" validate:"omitempty,max=255"`
 		// LectureContents 讲次内容
-		LectureContents []*LectureContent `json:"lectureContents" validate:"omitempty"`
+		LectureContents []*LectureContent `json:"lectureContents" validate:"omitempty,dive"`
 	}
 
 	// UpdateLectureReq 更新讲次请求
@@ -76,7 +76,7 @@ type (
 		// Profile 简介
 		Profile string `json:"profile" validate:"omitempty,max=255"`
 		// LectureContents 讲次内容
-		LectureContents []*LectureContent `json:"lectureContents"`
+		LectureContents []*LectureContent `json:"lectureContents" validate:"dive"`
 	}
 
 	// SwitchItem 交换项
