@@ -1,10 +1,10 @@
 package core
 
 const (
-	// FileApiInitiateMultipartUpload 初始化分块上传信息
-	FileApiInitiateMultipartUpload ApiPath = "/uploads/multiparts/chunks"
-	// FileApiCompleteMultipartUpload 完成化分块上传信息
-	FileApiCompleteMultipartUpload ApiPath = "/uploads/multiparts/chunks"
-	// FileApiAbortMultipartUploadReq 取消分块上传
-	FileApiAbortMultipartUploadReq ApiPath = "/uploads/multiparts/chunks"
+	// FileChunkApiInitiateMultipartUpload 初始化分块上传信息
+	FileChunkApiInitiateMultipartUpload ApiPath = "/uploads/multiparts/chunks"
+	// FileChunkApiCompleteMultipartUpload 完成化分块上传信息
+	FileChunkApiCompleteMultipartUpload ApiPath = "/uploads/multiparts/chunks"
+	// FileApiChunkAbortMultipartUploadReq 取消分块上传
+	FileChunkApiAbortMultipartUploadReq ApiPath = "/uploads/multiparts/chunks"
 )
