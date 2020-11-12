@@ -30,7 +30,7 @@ type (
 		// LectureId 课程Id
 		LectureId int64 `xorm:"bigint notnull default(0)" json:"lectureId,string"`
 		// FileId 展示图片文件编号Id
-		FileId string `xorm:"char(20) notnull default(0)" json:"fileId" validate:"required len=20"`
+		FileId string `xorm:"char(20) notnull default(0)" json:"fileId" validate:"required,len=20"`
 		// FileName 名称
 		FileName string `xorm:"varchar(32) notnull default('')" json:"fileName" validate:"required"`
 		// 内容类型：0-讲次视频，1-讲次资料
