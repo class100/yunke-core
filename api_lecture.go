@@ -12,7 +12,7 @@ const (
 	// LectureApiGetByCourseId 根据课程Id获取章节信息
 	LectureApiGetByCourseId ApiPath = "lectures/courses/{id}"
 	// LectureSwitchSequence 调整章节顺序
-	LectureSwitchSequence ApiPath = "lectures/s witches"
+	LectureSwitchSequence ApiPath = "lectures/switches"
 	// GetFirstLectureByCourse 获取第一
 	LectureFirstByCourseId ApiPath = "lectures/firsts"
 )
