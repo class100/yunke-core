@@ -4,6 +4,9 @@ type (
 	// InitiateMultipartUploadReq 初始化分块上传请求
 	InitiateMultipartUploadReq struct {
 		MultipartUploadData
+
+		// UserId 请求者编号
+		CreatorId int64 `json:"creatorId,string" validate:"required"`
 	}
 
 	// InitiateMultipartUploadRsp 初始化分块上传响应
