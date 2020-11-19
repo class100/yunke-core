@@ -16,6 +16,8 @@ const (
 	FileDirTypeSystemFile DirType = "system"
 	// FileDirTypeCourse 课程资源
 	FileDirTypeCourse = "course"
+	// FileDirTypeCourse 课程资源
+	FileDirTypeCourseTimeRecord = "record"
 	// FileDirTypeOrgRelease 版本发布文件
 	FileDirTypeOrgRelease DirType = "org-release"
 )
