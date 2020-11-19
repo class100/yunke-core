@@ -59,6 +59,10 @@ type (
 	// ClientStatus 客户端状态
 	ClientStatus int8
 
+	// Client 客户端信息
+	Client struct {
+	}
+
 	// BaseClient 客户端版本
 	BaseClient struct {
 		gox.BaseStruct `xorm:"extends"`

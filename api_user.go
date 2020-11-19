@@ -7,4 +7,6 @@ const (
 	UserTeacherApiDelete ApiPath = "users/teachers/{id}"
 	// UserApiUpdate 更新用户
 	UserApiUpdate ApiPath = "users/{id}"
+	// UserApiGetByPhone 根据电话获取用户信息
+	UserApiGetByPhone = "users/infos/{phone}"
 )

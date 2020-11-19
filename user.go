@@ -123,4 +123,15 @@ type (
 		// RoleNames 该用户所属于的角色名称列表
 		RoleNames []string `json:"roleNames"`
 	}
+
+	//  GetUserReq 根据手机号获取用户信息请求
+	GetUserReq struct {
+		RequiredBasePhone
+	}
+	
+	// GetUserRsp 根据手机号获取用户信息响应
+	GetUserRsp struct {
+		// 用户信息
+		User User `json:"user"`
+	}
 )
