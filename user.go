@@ -7,9 +7,17 @@ import (
 const (
 	// UserStatusNormal 正常状态
 	UserStatusNormal UserStatus = 0
+
+	// GetUserTypeId 默认通过用户编号
+	GetUserTypeId GetUserType = "id"
+	// GetUserInfoTypePhone 通过手机号获取
+	GetUserTypePhone GetUserType = "phone"
 )
 
 type (
+	// GetUserType 获取用户信息类型
+	GetUserType string
+
 	// UserStatus 用户状态
 	UserStatus int8
 
@@ -126,12 +134,11 @@ type (
 
 	//  GetUserReq 根据手机号获取用户信息请求
 	GetUserReq struct {
-		RequiredBasePhone
-	}
-	
-	// GetUserRsp 根据手机号获取用户信息响应
-	GetUserRsp struct {
-		// 用户信息
-		User User `json:"user"`
+		// Id 需要查询的用户的唯一标识
+		Id string `json:"id" validate:"required"`
+		// Type 取得用户的类型
+		Type GetUserType `default:"id" json:"type" validate:"required,oneof=id phone email schoolNum"`
+		// Extra 是否包含额外信息
+		Extra bool `default:"true" json:"extra"`
 	}
 )
