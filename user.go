@@ -146,7 +146,7 @@ type (
 		RoleNames []string `json:"roleNames"`
 	}
 
-	//  GetUserReq 根据手机号获取用户信息请求
+	//  GetUserReq 获取用户信息请求
 	GetUserReq struct {
 		// Id 需要查询的用户的唯一标识
 		Id string `json:"id" validate:"required"`
@@ -156,6 +156,7 @@ type (
 		Extra bool `default:"true" json:"extra"`
 	}
 
+	// GetUserRsp 获取用户信息响应
 	GetUserRsp struct {
 		User
 
