@@ -48,6 +48,20 @@ type (
 		SchoolNum gox.DBString `xorm:"varchar(64) notnull default('')" json:"schoolNum"`
 	}
 
+	// SimpleRole 简单角色数据
+	SimpleRole struct {
+		// Id 角色编号
+		Id int64 `json:"id,string"`
+		// Name 角色类型
+		// 1:管理员
+		// 2:讲师
+		// 3:助教
+		// 4:学生
+		// 5:教务
+		// 6:运营
+		Name string `json:"name"`
+	}
+
 	// OmitemptyPhone 手机号（有数据就验证）
 	OmitemptyPhone struct {
 		// 手机号
@@ -132,7 +146,7 @@ type (
 		RoleNames []string `json:"roleNames"`
 	}
 
-	//  GetUserReq 根据手机号获取用户信息请求
+	//  GetUserReq 获取用户信息请求
 	GetUserReq struct {
 		// Id 需要查询的用户的唯一标识
 		Id string `json:"id" validate:"required"`
@@ -140,5 +154,13 @@ type (
 		Type GetUserType `default:"id" json:"type" validate:"required,oneof=id phone email schoolNum"`
 		// Extra 是否包含额外信息
 		Extra bool `default:"true" json:"extra"`
+	}
+
+	// GetUserRsp 获取用户信息响应
+	GetUserRsp struct {
+		User
+
+		// Roles 角色列表
+		Roles []*SimpleRole `json:"roleNames"`
 	}
 )
