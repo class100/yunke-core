@@ -155,4 +155,11 @@ type (
 		// Extra 是否包含额外信息
 		Extra bool `default:"true" json:"extra"`
 	}
+
+	GetUserRsp struct {
+		User
+
+		// Roles 角色列表
+		Roles []*SimpleRole `json:"roleNames"`
+	}
 )
