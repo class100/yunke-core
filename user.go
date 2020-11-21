@@ -48,6 +48,20 @@ type (
 		SchoolNum gox.DBString `xorm:"varchar(64) notnull default('')" json:"schoolNum"`
 	}
 
+	// SimpleRole 简单角色数据
+	SimpleRole struct {
+		// Id 角色编号
+		Id int64 `json:"id,string"`
+		// Name 角色类型
+		// 1:管理员
+		// 2:讲师
+		// 3:助教
+		// 4:学生
+		// 5:教务
+		// 6:运营
+		Name string `json:"name"`
+	}
+
 	// OmitemptyPhone 手机号（有数据就验证）
 	OmitemptyPhone struct {
 		// 手机号
