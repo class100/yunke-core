@@ -46,7 +46,7 @@ type (
 	// AddCourseContentReq 添加课程内容请求
 	AddCourseContentReq struct {
 		// Contents 课程内容,展示图片或者展示视频
-		Contents []*CourseContent `json:"contents" validate:"dive"`
+		Contents []*CourseContent `json:"contents" validate:"min=1,dive"`
 	}
 
 	// AddCourseContentRsp 添加课程内容响应
