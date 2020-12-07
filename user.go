@@ -171,7 +171,7 @@ type (
 		// RoleId 用户角色编号
 		// 2: 讲师角色编号
 		// 4：学生角色编号
-		RoleId int64 `default:"2" json:"roleId" validate:"required,oneof=2 4"`
+		RoleId RoleId `json:"roleId" validate:"required,oneof=2 4"`
 	}
 
 	// BatchAddUserRsp 批量添加用户响应
