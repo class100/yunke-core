@@ -163,4 +163,22 @@ type (
 		// Roles 角色列表
 		Roles []*SimpleRole `json:"roleNames"`
 	}
+
+	// BatchAddUserReq 批量添加用户请求
+	BatchAddUserReq struct {
+		// Users 要添加的用户
+		Users []*User `json:"users" validate:"required,dive"`
+		// RoleId 用户角色编号
+		// 2: 讲师角色编号
+		// 4：学生角色编号
+		RoleId RoleId `json:"roleId" validate:"required,oneof=2 4"`
+	}
+
+	// BatchAddUserRsp 批量添加用户响应
+	BatchAddUserRsp struct {
+		// ConflictUsers 冲突的用户
+		ConflictUsers []*User `json:"conflictUsers" validate:"omitempty"`
+		// SuccessUsers 成功添加用户
+		SuccessUsers []*User `json:"successUsers" validate:"omitempty"`
+	}
 )
