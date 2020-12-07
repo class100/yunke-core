@@ -9,4 +9,6 @@ const (
 	UserApiUpdate ApiPath = "users/{id}"
 	// UserApiGet 根据电话获取用户信息
 	UserApiGet = "users/{id}"
+	// UserApiBatchAdd 批量添加用户
+	UserApiBatchAdd = "users/batches"
 )
