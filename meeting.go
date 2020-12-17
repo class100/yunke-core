@@ -17,8 +17,8 @@ type (
 		AppId int64 `json:"appId,string"`
 		// VirtualUserId 虚拟账号
 		VirtualUserId string `json:"virtualUserId"`
-		// UserToken 令牌
-		UserToken string `json:"userToken"`
+		// MeetingToken 令牌
+		MeetingToken string `json:"meetingToken"`
 		// VirtualPhone 虚拟手机号
 		VirtualPhone string `json:"virtual_phone"`
 		// MeetingId 会议Id
@@ -27,8 +27,6 @@ type (
 		MeetingNo uint64 `json:"meetingNo"`
 		// GroupId 组Id
 		GroupId int64 `json:"groupId,string"`
-		// CliveToken 创世云直播令牌
-		CliveToken string `json:"cliveToken"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
