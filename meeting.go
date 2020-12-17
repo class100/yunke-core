@@ -27,6 +27,8 @@ type (
 		MeetingNo uint64 `json:"meetingNo"`
 		// GroupId 组Id
 		GroupId int64 `json:"groupId,string"`
+		// CliveToken 创世云直播令牌
+		CliveToken string `json:"cliveToken"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
