@@ -17,8 +17,8 @@ type (
 		AppId int64 `json:"appId,string"`
 		// VirtualUserId 虚拟账号
 		VirtualUserId string `json:"virtualUserId"`
-		// UserToken 令牌
-		UserToken string `json:"userToken"`
+		// MeetingToken 令牌
+		MeetingToken string `json:"meetingToken"`
 		// VirtualPhone 虚拟手机号
 		VirtualPhone string `json:"virtual_phone"`
 		// MeetingId 会议Id
