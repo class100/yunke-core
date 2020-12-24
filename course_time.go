@@ -90,7 +90,7 @@ type (
 		// IsCaptchaRequired 是否需要验证码
 		IsCaptchaRequired bool `xorm:"-" json:"-"`
 		// Captcha 验证码
-		Captcha string `xorm:"char(6) default('')" json:"captcha"`
+		Captcha *string `xorm:"char(6) default('')" json:"captcha"`
 		// RecordType 录制操作类型
 		// 1:不进行录制
 		// 2:仅仅进行录制

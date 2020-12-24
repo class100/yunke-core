@@ -59,7 +59,7 @@ type (
 		// 4:学生
 		// 5:教务
 		// 6:运营
-		Name string `json:"name"`
+		Name *string `json:"name"`
 	}
 
 	// OmitemptyPhone 手机号（有数据就验证）
