@@ -27,6 +27,8 @@ type (
 		MeetingNo uint64 `json:"meetingNo"`
 		// GroupId 组Id
 		GroupId int64 `json:"groupId,string"`
+		// GroupWebsocket 组websocket地址
+		GroupWebsocket string `json:"group_websocket"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
