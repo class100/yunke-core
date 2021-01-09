@@ -19,8 +19,10 @@ type (
 		VirtualUserId string `json:"virtualUserId"`
 		// MeetingToken 令牌
 		MeetingToken string `json:"meetingToken"`
-		// VirtualPhone 虚拟手机号
+		// VirtualPhone 虚拟手机号 TODO ,后期删除
 		VirtualPhone string `json:"virtual_phone"`
+		// MeetingPhone 会议中手机号
+		MeetingPhone string `json:"meetingPhone"`
 		// MeetingId 会议Id
 		MeetingId string `json:"meetingId"`
 		// MeetingNo 会议编号
@@ -28,7 +30,7 @@ type (
 		// GroupId 组Id
 		GroupId int64 `json:"groupId,string"`
 		// GroupWebsocket 组websocket地址
-		GroupWebsocket string `json:"group_websocket"`
+		GroupWebsocket string `json:"groupWebsocket"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
