@@ -36,7 +36,7 @@ type (
 		// Type 内容类型：0-讲次视频，1-讲次资料
 		Type int8 `default:"0" xorm:"tinyint notnull default(0)" json:"type" validate:"required_with=0 1"`
 		// Duration 视频时长(单位秒)
-		Duration int32 `default:"0" xorm:"tinyint notnull default(0)" json:"duration"`
+		Duration int32 `default:"0" xorm:"bigint notnull default(0)" json:"duration"`
 	}
 
 	// AddLectureReq 添加讲次请求
