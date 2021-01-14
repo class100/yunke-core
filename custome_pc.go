@@ -12,7 +12,7 @@ type (
 	// PCConfig PC端配置
 	PCConfig struct {
 		// Title 标题
-		Title string `json:"title,omitempty" validate:"required,max=10"`
+		Title string `json:"title,omitempty" validate:"required,prefix_or_suffix_space,max=10"`
 		// Logo 图标
 		Logo string `json:"logo,omitempty" validate:"omitempty,len=20"`
 		// StartupLogo 启动图标

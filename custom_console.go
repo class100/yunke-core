@@ -10,7 +10,7 @@ type (
 	// ConsoleConfig 管理后台配置
 	ConsoleConfig struct {
 		// Title 标题
-		Title string `json:"title,omitempty" validate:"required,max=10"`
+		Title string `json:"title,omitempty" validate:"required,prefix_or_suffix_space,max=10"`
 		// Dsp 描述
 		Dsp string `json:"dsp,omitempty" validate:"omitempty,max=50"`
 		// NavBarLogo 后台导航栏Logo

@@ -12,7 +12,7 @@ type (
 	// AppConfig App配置
 	AppConfig struct {
 		// Name 应用名称
-		Name string `json:"name,omitempty" validate:"required,max=10"`
+		Name string `json:"name,omitempty" validate:"required,prefix_or_suffix_space,max=10"`
 		// Logo 应用图标
 		Logo string `json:"logo,omitempty" validate:"omitempty,len=20"`
 		// StartupLogo 启动图标
