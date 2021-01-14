@@ -8,6 +8,37 @@ import (
 	"github.com/storezhang/transfer"
 )
 
+const (
+	// DefaultAppStartupLogo APP默认图标
+	DefaultAppStartupLogo string = "app-startup-logo.png"
+	// DefaultAppSplashLogo APP默认闪屏
+	DefaultAppSplashLogo string = "app-splash-logo.png"
+	// DefaultAppConfigFilename APP默认配置文件名
+	DefaultAppConfigFilename string = "assets/flutter_assets/assets/config.json"
+	// DefaultAppSplashFilename APP默认闪屏文件名
+	DefaultAppSplashFilename string = "res/mipmap-xxhdpi-v4/launch_image.png"
+	// DefaultAndroidManifestFilename Android默认Manifest文件名
+	DefaultAndroidManifestFilename string = "AndroidManifest.xml"
+	// DefaultAndroidReplacePackageName 默认的Android客户端替换饭锅
+	// 之所以会有这个包名替换，是因为在Android 9以上的版本里，申请权限时，需要给特定的包名，比如
+	// a.permission.MIPUSH_RECEIVE
+	// b.permission.MIPUSH_RECEIVE
+	// 所有和开发约定，在打包时，将DefaultAndroidReplacePackageName全部替换成特定包名
+	DefaultAndroidReplacePackageName string = "com.class100.yunke.dev"
+	// DefaultAppName 默认程序名称
+	DefaultAppName string = "云视课堂"
+
+	// DefaultAndroidSignFile 默认的安卓签名秘钥
+	DefaultAndroidSignFile string = "yunke.keystore"
+	// DefaultAndroidSignStorePass 默认转码
+	DefaultAndroidSignStorePass string = "2020919"
+	// DefaultAndroidSignAlias 默认短语
+	DefaultAndroidSignAlias string = "yunke"
+	// DefaultAndroidSignDigestAlg 默认加密算法
+	DefaultAndroidSignDigestAlg string = "SHA1"
+	DefaultAndroidSignSigAlg    string = "SHA1withRSA"
+)
+
 type (
 	// AppConfig App配置
 	AppConfig struct {
@@ -99,7 +130,7 @@ func (ac *AppConfig) Replaces(
 		// 替换闪屏图片
 		replace.NewFileReplace(DefaultAppSplashFilename, splash),
 		// 替换包名
-		replace.NewStringContentReplace(DefaultAndroidManifestFilename, "com.class100.dev", packageName),
+		replace.NewStringContentReplace(DefaultAndroidManifestFilename, DefaultAndroidReplacePackageName, packageName),
 		// 替换通信地址
 		replace.NewJSONReplace(DefaultAppConfigFilename, replace.JSONReplaceElement{
 			Path:  "server",

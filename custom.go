@@ -25,28 +25,6 @@ const (
 	DefaultPCConfigFilename string = "resources/lib/conf/conf.json"
 	// DefaultPCPackageConfigFilename PC端包配置文件名
 	DefaultPCPackageConfigFilename string = "resources/app/package.json"
-	// DefaultAppStartupLogo APP默认图标
-	DefaultAppStartupLogo string = "app-startup-logo.png"
-	// DefaultAppSplashLogo APP默认闪屏
-	DefaultAppSplashLogo string = "app-splash-logo.png"
-	// DefaultAppConfigFilename APP默认配置文件名
-	DefaultAppConfigFilename string = "assets/flutter_assets/assets/config.json"
-	// DefaultAppSplashFilename APP默认闪屏文件名
-	DefaultAppSplashFilename string = "res/mipmap-xxhdpi-v4/launch_image.png"
-	// DefaultAndroidManifestFilename Android默认Manifest文件名
-	DefaultAndroidManifestFilename string = "AndroidManifest.xml"
-	// DefaultAppName 默认程序名称
-	DefaultAppName string = "云视课堂"
-
-	// DefaultAndroidSignFile 默认的安卓签名秘钥
-	DefaultAndroidSignFile string = "yunke.keystore"
-	// DefaultAndroidSignStorePass 默认转码
-	DefaultAndroidSignStorePass string = "2020919"
-	// DefaultAndroidSignAlias 默认短语
-	DefaultAndroidSignAlias string = "yunke"
-	// DefaultAndroidSignDigestAlg 默认加密算法
-	DefaultAndroidSignDigestAlg string = "SHA1"
-	DefaultAndroidSignSigAlg    string = "SHA1withRSA"
 )
 
 const (
