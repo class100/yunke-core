@@ -132,7 +132,7 @@ func (alr *AddLectureReq) Model() *Lecture {
 func (ulr *UpdateLectureReq) Model() *Lecture {
 	return &Lecture{
 		BaseStruct: gox.BaseStruct{
-			Id: ulr.Id,
+			IdStruct: gox.IdStruct{Id: ulr.Id},
 		},
 		CourseId: ulr.CourseId,
 		Type:     ulr.Type,
@@ -148,7 +148,7 @@ func (slr *SwitchSequenceReq) Models() (items []*Lecture) {
 	for _, item := range slr.SwitchItems {
 		lecture := &Lecture{
 			BaseStruct: gox.BaseStruct{
-				Id: item.Id,
+				IdStruct: gox.IdStruct{Id: item.Id},
 			},
 			ParentId: item.ParentId,
 			Sequence: item.Sequence,
