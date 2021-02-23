@@ -7,12 +7,16 @@ import (
 const (
 	// CourseTimeUnStart 0：未开始
 	CourseTimeUnStart CourseTimeStatus = 0
-	// CourseTiming 2：进行中
-	CourseTiming CourseTimeStatus = 2
+	// CourseTimePrior 1: 预课中
+	CourseTimePrior CourseTimeStatus = 1
+	// CourseTimeStarting 2：进行中
+	CourseTimeStarting CourseTimeStatus = 2
 	// CourseTimeEnd 3：结束
 	CourseTimeEnd CourseTimeStatus = 3
-	// CourseTimeExpired 4：过期
-	CourseTimeExpired CourseTimeStatus = 4
+	// CourseTimeDelayed 4：拖堂
+	CourseTimeDelayed CourseTimeStatus = 4
+	// CourseTimeSuspended 5： 已经中止的
+	CourseTimeSuspended CourseTimeStatus = 5
 
 	// AllowedTypeStudentInCourseTime 1：课程时刻内的学生
 	AllowedTypeStudentInCourseTime AllowedType = 1
