@@ -9,6 +9,11 @@ type (
 		AppId int64 `json:"appId,string"`
 		// Username 用户名字
 		Username string `json:"username"`
+		// TODO ①以后删除掉
+		// RoleType 角色类型
+		// 0:默认
+		// 1:督课员
+		RoleType int8 `json:"roleType" validate:"omitempty,oneof=0 1"`
 	}
 
 	// JoinMeetingRsp 加入会议响应
@@ -31,6 +36,9 @@ type (
 		GroupId int64 `json:"groupId,string"`
 		// GroupWebsocket 组websocket地址
 		GroupWebsocket string `json:"groupWebsocket"`
+		// TODO ①以后删除掉,后也删除
+		// UserToken 当请求接口中 RoleType为1时有值
+		UserToken string `json:"userToken"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
