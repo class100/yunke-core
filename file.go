@@ -24,7 +24,7 @@ type (
 	// BaseUploadReq 文件上传请求基础信息
 	BaseUploadReq struct {
 		// FileId 文件编号
-		FileId *string `json:"fileId" validate:"omitempty,len=20"`
+		FileId string `json:"fileId" validate:"omitempty,len=20"`
 		// Filename 文件名字
 		Filename string `json:"filename:" validate:"omitempty,without_special_symbol,filename"`
 		// DataSize 文件大小
