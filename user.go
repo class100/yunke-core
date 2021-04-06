@@ -44,8 +44,6 @@ type (
 		Status UserStatus `default:"0" xorm:"tinyint notnull default(0)" json:"status"`
 		// Info 介绍
 		Info string `xorm:"varchar(255) notnull default('')" json:"info"`
-		// SchoolNum 学号
-		SchoolNum gox.DBString `xorm:"varchar(64) notnull default('')" json:"schoolNum"`
 	}
 
 	// SimpleRole 简单角色数据
