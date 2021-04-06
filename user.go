@@ -44,8 +44,6 @@ type (
 		Status UserStatus `default:"0" xorm:"tinyint notnull default(0)" json:"status"`
 		// Info 介绍
 		Info string `xorm:"varchar(255) notnull default('')" json:"info"`
-		// SchoolNum 学号
-		SchoolNum gox.DBString `xorm:"varchar(64) notnull default('')" json:"schoolNum"`
 	}
 
 	// SimpleRole 简单角色数据
@@ -108,8 +106,6 @@ type (
 		Info string `json:"info" validate:"omitempty,max=255"`
 		// RoleNames 该用户所属于的角色名称列表
 		RoleNames []string `json:"roleNames" validate:"required"`
-		// ClassIds 所属的班级
-		ClassIds gox.Int64Slice `json:"classIds"`
 		// Status 用户状态
 		Status UserStatus `default:"0" json:"status" validate:"omitempty,oneof=0 1"`
 		// Password 密码
@@ -138,8 +134,6 @@ type (
 		Sex int8 `default:"1" json:"sex" validate:"omitempty,oneof=0 1"`
 		// Info 介绍
 		Info string `json:"info" validate:"omitempty,max=255"`
-		// ClassIds 班级ID
-		ClassIds gox.Int64Slice `json:"classIds"`
 		// Status 用户状态
 		Status UserStatus `default:"0" json:"status" validate:"omitempty,oneof=0 1"`
 		// RoleNames 该用户所属于的角色名称列表
