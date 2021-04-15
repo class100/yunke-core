@@ -55,8 +55,6 @@ type (
 
 	// AddCourseReq 添加课程
 	AddCourseReq struct {
-		BaseSchool
-
 		// Name 课程名称
 		Name string `json:"name" validate:"required,without_special_symbol,min=2,max=30"`
 		// Type 课程类型
