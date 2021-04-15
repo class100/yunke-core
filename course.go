@@ -70,8 +70,6 @@ type (
 		CreatorId int64 `json:"creatorId,string" validate:"required"`
 		// Info 介绍
 		Info string `json:"info" validate:"omitempty,max=10000"`
-		// TeacherIds 讲师编号列表
-		TeacherIds gox.Int64Slice `json:"teacherIds"`
 		// ResourcePath 课程资源关联路径
 		// 例如 /a/b/c
 		ResourcePath string `json:"resourcePath" validate:"omitempty,startswith=/"`
@@ -97,12 +95,8 @@ type (
 		CategoryId int64 `json:"categoryId,string"`
 		// Cover 封面
 		Cover string `json:"cover" validate:"omitempty,len=20"`
-		// MaxNum 教室容量
-		MaxNum int `json:"maxNum"`
 		// Info 介绍
 		Info string `json:"info" validate:"omitempty,max=10000"`
-		// TeacherIds 讲师编号列表
-		TeacherIds gox.Int64Slice `json:"teacherIds"`
 		// ResourcePath 课程资源关联路径
 		// 例如/a/b/c
 		ResourcePath string `json:"resourcePath" validate:"omitempty,startswith=/"`

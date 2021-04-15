@@ -62,6 +62,7 @@ type (
 	// CourseTime  课程时刻
 	CourseTime struct {
 		gox.IdStruct `xorm:"extends"`
+		BaseSchool   `xorm:"extends"`
 
 		// CourseScheduleId 课程计划
 		CourseScheduleId int64 `xorm:"bigint(20) notnull default(1)" json:"courseScheduleId,string"`
