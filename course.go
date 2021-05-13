@@ -10,10 +10,10 @@ const (
 	// CourseTypePublic 4：公开课
 	CourseTypePublic CourseType = 4
 
-	// ClassModelOriginal 0：原生模式
-	ClassModelOriginal ClassMode = 0
 	// ClassModelCustom 1：定制的
 	ClassModelCustom ClassMode = 1
+	// ClassModelOriginal 1：原生模式
+	ClassModelOriginal ClassMode = 2
 )
 
 type (
@@ -48,8 +48,8 @@ type (
 		// 例如/a/b/c
 		ResourcePath string `xorm:"varchar(255)" json:"resourcePath"`
 		// ClassMode 上课模式
-		// 0：原生类型
 		// 1：自定义类型
+		// 2：原生类型
 		ClassMode ClassMode `xorm:"tinyint default(1)" json:"classMode"`
 	}
 
@@ -72,9 +72,9 @@ type (
 		// 例如 /a/b/c
 		ResourcePath string `json:"resourcePath" validate:"omitempty,startswith=/"`
 		// ClassMode 上课模式
-		// 0：原生类型
 		// 1：自定义类型
-		ClassMode ClassMode `default:"0" json:"classMode" validate:"omitempty,oneof=0 1"`
+		// 2：原生类型
+		ClassMode ClassMode `default:"1" json:"classMode" validate:"omitempty,oneof=1 2"`
 	}
 
 	// UpdateCourseReq 更新课程请求
@@ -99,8 +99,8 @@ type (
 		// 例如/a/b/c
 		ResourcePath string `json:"resourcePath" validate:"omitempty,startswith=/"`
 		// ClassMode 上课模式
-		// 0：原生类型
+		// 2：原生类型
 		// 1：自定义类型
-		ClassMode ClassMode `default:"0" json:"classMode" validate:"omitempty,oneof=0 1"`
+		ClassMode ClassMode `default:"1" json:"classMode" validate:"omitempty,oneof=1 2"`
 	}
 )
