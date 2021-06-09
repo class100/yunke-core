@@ -34,6 +34,8 @@ type (
 		GroupId int64 `json:"groupId,string"`
 		// GroupWebsocket 组websocket地址
 		GroupWebsocket string `json:"groupWebsocket"`
+		// 权限控制
+		PrivateMapKey string `json:"privateMapKey"`
 	}
 
 	// LeaveMeetingReq 离开会议请求
