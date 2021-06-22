@@ -109,6 +109,10 @@ type (
 		// 2:仅仅进行录制
 		// 3：录制并可以回放
 		RecordType RecordType `xorm:"tinyint default(1)" json:"recordType"`
+		// 是否允许直播
+		// 1 不允许直播
+		// 2 允许直播
+		LiveAllowedType LiveAllowedType `xorm:"tinyint default(1)" json:"liveAllowedType"`
 	}
 )
 
