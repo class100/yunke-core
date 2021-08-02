@@ -31,6 +31,11 @@ const (
 	RecordTypeOnly RecordType = 2
 	// RecordTypePlayback  3：录制并可以回放
 	RecordTypePlayback RecordType = 3
+
+	// 1 不允许直播
+	LiveAllowedTypeNo LiveAllowedType = 1
+	// 2 许直播
+	LiveAllowedTypeYes LiveAllowedType = 2
 )
 
 type (
@@ -58,6 +63,9 @@ type (
 	// 2：系统内学生
 	// 3：允许游客
 	AllowedType int8
+
+	// 互动课是否允许直播
+	LiveAllowedType int8
 
 	// CourseTime  课程时刻
 	CourseTime struct {
@@ -101,6 +109,10 @@ type (
 		// 2:仅仅进行录制
 		// 3：录制并可以回放
 		RecordType RecordType `xorm:"tinyint default(1)" json:"recordType"`
+		// 是否允许直播
+		// 1 不允许直播
+		// 2 允许直播
+		LiveAllowedType LiveAllowedType `xorm:"tinyint default(1)" json:"liveAllowedType"`
 	}
 )
 
