@@ -31,6 +31,11 @@ const (
 	RecordTypeOnly RecordType = 2
 	// RecordTypePlayback  3：录制并可以回放
 	RecordTypePlayback RecordType = 3
+
+	// 1 不允许直播
+	LiveAllowedTypeNo LiveAllowedType = 1
+	// 2 许直播
+	LiveAllowedTypeYes LiveAllowedType = 2
 )
 
 type (
@@ -59,6 +64,9 @@ type (
 	// 3：允许游客
 	AllowedType int8
 
+	// 互动课是否允许直播
+	LiveAllowedType int8
+
 	// CourseTime  课程时刻
 	CourseTime struct {
 		gox.IdStruct `xorm:"extends"`
@@ -84,8 +92,9 @@ type (
 		// GroupId 组ID
 		GroupId int64 `xorm:"bigint(20) notnull default(0)" json:"groupId,string"`
 		// ClassMode 上课模式
-		// 0：原生类型
-		// 1：自定义类型
+		// 1：智慧课堂
+		// 2：双师模式
+		// 3：会议模式
 		ClassMode ClassMode `xorm:"tinyint default(1)" json:"classMode"`
 		// 允许类型
 		// 1：课程时刻内的学生
@@ -101,6 +110,10 @@ type (
 		// 2:仅仅进行录制
 		// 3：录制并可以回放
 		RecordType RecordType `xorm:"tinyint default(1)" json:"recordType"`
+		// 是否允许直播
+		// 1 不允许直播
+		// 2 允许直播
+		LiveAllowedType LiveAllowedType `xorm:"tinyint default(1)" json:"liveAllowedType"`
 	}
 )
 
