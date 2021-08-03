@@ -92,8 +92,9 @@ type (
 		// GroupId 组ID
 		GroupId int64 `xorm:"bigint(20) notnull default(0)" json:"groupId,string"`
 		// ClassMode 上课模式
-		// 0：原生类型
-		// 1：自定义类型
+		// 1：智慧课堂
+		// 2：双师模式
+		// 3：会议模式
 		ClassMode ClassMode `xorm:"tinyint default(1)" json:"classMode"`
 		// 允许类型
 		// 1：课程时刻内的学生
