@@ -36,9 +36,19 @@ const (
 	LiveAllowedTypeNo LiveAllowedType = 1
 	// 2 许直播
 	LiveAllowedTypeYes LiveAllowedType = 2
+
+	// 1-标清：不高于640 × 480
+	VideoDimensionTypeStandard VideoDimensionType = 1
+	// 2-高清：640 × 480 - 1280 × 720
+	VideoDimensionTypeHigh VideoDimensionType = 1
+	// 3-超清：高于1280 × 720
+	VideoDimensionTypeSuper VideoDimensionType = 1
 )
 
 type (
+	// 视频质量
+	VideoDimensionType int8
+
 	// BatchAddCourseTimeReq 批量添加课程时刻请求
 	BatchAddCourseTimeReq struct {
 		CourseTimes []*CourseTime `json:"courseTimes"`
@@ -114,6 +124,13 @@ type (
 		// 1 不允许直播
 		// 2 允许直播
 		LiveAllowedType LiveAllowedType `xorm:"tinyint default(1)" json:"liveAllowedType"`
+		// 视频质量
+		// 1-标清：不高于640 × 480
+		// 2-高清：640 × 480 - 1280 × 720
+		// 3-超清：高于1280 × 720
+		VideoDimension VideoDimensionType `xorm:"tinyint default(1)"  json:"videoDimension"`
+		// 上台人数
+		StageNumber int8 `xorm:"tinyint default(1)"  json:"stageNumber"`
 	}
 )
 
