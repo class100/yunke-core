@@ -20,20 +20,14 @@ type (
 	JoinMeetingRsp struct {
 		// AppId 程序编号
 		AppId int64 `json:"appId,string"`
-		// VirtualUserId 虚拟账号
-		VirtualUserId string `json:"virtualUserId"`
+		// 用户编号 如果是游客则返回一个虚拟的号
+		UserId int64 `json:"userId,string"`
 		// MeetingToken 令牌
 		MeetingToken string `json:"meetingToken"`
-		// MeetingPhone 会议中手机号
-		MeetingPhone string `json:"meetingPhone"`
 		// MeetingId 会议Id
 		MeetingId string `json:"meetingId"`
 		// MeetingNo 会议编号
 		MeetingNo uint64 `json:"meetingNo,string"`
-		// GroupId 组Id
-		GroupId int64 `json:"groupId,string"`
-		// GroupWebsocket 组websocket地址
-		GroupWebsocket string `json:"groupWebsocket"`
 		// 权限控制
 		PrivateMapKey string `json:"privateMapKey"`
 	}
