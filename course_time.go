@@ -89,7 +89,7 @@ type (
 		// TeacherId 主讲老师
 		TeacherId int64 `xorm:"bigint(20) default(1)" json:"teacherId,string"`
 		// 课节名称
-		Name string `xorm:"varchar(255) default('课节')" json:"name,string"`
+		Name string `xorm:"varchar(255) default('课节')" json:"name"`
 		// ClassTime 上课时间
 		ClassTime gox.Timestamp `xorm:"datetime default('2020-02-04 09:55:52')" json:"classTime"`
 		// Duration 授课时长
